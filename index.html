@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krenDEL</title>
+    <link rel="stylesheet" type="text/css" href="main.css"
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>krendel</span>
+        </div>
+    <div id="about">
+        <a href="#" onclick="slowScroll('#overview')" title="О НАС">О НАС</a>
+        <a href="#" onclick="slowScroll('.hotspot')" title="НАШИ БЛЮДА">НАШИ БЛЮДА</a>
+        <a href="#" onclick="slowScroll('#contacts')" title="СДЕЛАТЬ ЗАКАЗ">СДЕЛАТЬ ЗАКАЗ</a>
+        <a href="contact_us.html">СВЯЗЬ С НАМИ</a>
+        <a href="find_us.html">НАЙТИ НАС</a>
+    </div>
+    </header>
+
+    <div id="top">
+        <h1>Krendel</h1>
+        <h3>Estate</h3>
+      </div>
+
+
+      <div id="overview">
+        <h2>НАША</h2>
+        <h4>ИСТОРИЯ</h4>
+    
+        <div class="img">
+          <span>Оттолкнулся от берега наш сладкий корабль в 2014 году.
+            Мы - это семья, которая и дня не представляла без сладенького! И пройдя естественную и ревизию самых вкусных десертов в нашем городе было принято решение: будет кондитерская!
+            Наш концепт ясен и прозрачен.
+            </span>
+        </div>
+        <div class="img">
+          <img src="https://kartinkin.net/uploads/posts/2021-07/1626325285_58-kartinkin-com-p-koreiskie-deserti-yeda-krasivo-foto-64.jpg" alt="">
+          <span>В основе нашей политики лежит правило «Сделай, как для себя».
+            А для себя любимого, как известно, мы выбираем только самое качественное!</span>
+        </div>
+      </div>
+
+      <div id="information">
+        <h2>g</h2>
+        <h4 class="hotspot">МЕНЮ</h4> 
+        <p>На данный момент меню недоступно на нашем сайте. Боимся завистников КРЕНДЕЛЯ, которые своруют наши идеи!
+        </p>
+        <div class="img">
+            <img src="image/1.PNG" alt="">
+        </div>
+      </div>
+
+      <div id="contacts">
+        <center><h5>ОСТАВИТЬ ЗАКАЗ</h5></center>
+        <form id="form_input">
+          <label for="name">Имя <span>*</span></label><br>
+          <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+          <label for="email">Ваш телефон <span>*</span></label><br>
+                <input type="number" placeholder="Введите ваш номер телефона" name="number" id="number"><br>
+                <label for="message">Что нам пригтовить для вас? <span>*</span></label><br>
+                <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+                <div id="mess_send" class="btn">Отправить заказ</div>
+        </form>
+      </div>
+
+     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+    </script>
+</body>
+</html>
